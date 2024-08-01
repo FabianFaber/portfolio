@@ -1,0 +1,49 @@
+header {
+    width: 100vw;
+    height: 110px;
+    position: sticky;
+    top: 0;
+    background-color: #141D2F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    width: 135px;
+
+    .cls-1 {
+        fill: #00bee8;
+    }
+
+    .cls-1,
+    .cls-2,
+    .cls-3 {
+        stroke-width: 0px;
+    }
+
+    .cls-2 {
+        fill: #4b47ff;
+    }
+
+    .cls-3 {
+        fill: #fff;
+    }
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+
+    >a {
+        color: white;
+        font-size: 23px;
+        font-weight: 400;
+
+        &:hover {
+            color: #00BEE8;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.aboutMe {
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutMeContent {
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 471px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.attributes {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.attribute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+
+    >svg {
+        flex-shrink: 0;
+    }
+}
+
+.photoMe {
+    background-image: url('./../../assets/img/about-me/purple_shadow.png'), url('./../../assets/img/about-me/green_shadow.png');
+    background-position: left , right 100%; 
+    background-repeat: no-repeat, no-repeat;
+
+    >img {
+        margin-top: 100px;
+        margin-right: 100px;
+        width: 700px;
+        z-index: 2;
+    }
+
+}
+
+.seperator{
+    position: absolute; 
+    bottom: -1600px; 
+    left: 0;
+    right: 0;
+    background-image: url('./../../assets/img/about-me/seperator.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 1%;
+    height: 880px;
+}
