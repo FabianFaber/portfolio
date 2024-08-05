@@ -1,1 +1,16 @@
-<p>project works!</p>
+@for (project of projects; track $index) {
+    <div class="project">
+      <div>
+        <img [src]="project.image" alt="">
+      </div>
+      <div class="projectDescription">
+        <span>{{ project.name }}</span>
+        <p class="type">{{ project.type }}</p>
+        <p class="description">{{ project.description }}</p>
+        <div class="buttons">
+          <a [href]="project.link.liveTest" class="liveTest" target="_blank">Live test</a>
+          <a [href]="project.link.github" class="github" target="_blank">Github</a>
+        </div>
+      </div>
+    </div>
+  }

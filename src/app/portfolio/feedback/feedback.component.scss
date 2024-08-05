@@ -1,0 +1,64 @@
+.feedbackArea {
+    padding-left: 100px;
+    display: flex;
+    gap: 200px;
+}
+
+.feedback {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: white;
+    width: 850px;
+    height: 272px;
+    border-radius: 16px;
+    border: 4px solid #00BEE8;
+}
+
+.feedbackText {
+    display: flex;
+    width: 665px;
+    height: 112px;
+    font-size: 20px;
+    word-break: break;
+}
+
+.feedbackName {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.quatiationMark {
+    position: absolute;
+    top: -40px;
+    left: -60px;
+}
+
+.feedbackPerson {
+    display: flex;
+    align-items: center;
+}
+
+.feedbackImg {
+    width: 272px;
+    height: 272px;
+    border-radius: 1000px;
+    border: 4px solid #4B47FF;
+
+    >img {
+        width: 272px;
+        height: 272px;
+        border-radius: 1000px;
+    }
+}
+
+.feedbackLine {
+    height: 4px;
+    width: 250px;
+    background-color: #4B47FF;
+}

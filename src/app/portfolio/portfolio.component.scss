@@ -1,0 +1,15 @@
+.portfolio {
+    height: 100vh;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+
+    >p {
+        color: white;
+        margin-top: 20px;
+    }
+}

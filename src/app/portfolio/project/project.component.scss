@@ -1,0 +1,111 @@
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: 340px;
+    margin-bottom: 120px;
+
+    &:nth-child(odd) {
+        flex-direction: row;
+        .projectDescription {
+            text-align: start;
+        };
+        .buttons {
+            justify-content: flex-start;
+        };
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        .projectDescription {
+            text-align: end;
+        };
+        .buttons {
+            justify-content: flex-end;
+        };
+    }
+    
+
+    >div {
+        display: flex;
+        justify-content: center;
+
+        >span {
+            font-size: 32px;
+            font-weight: 700;
+            color: #4B47FF;
+        }
+
+        >img {
+            width: 400px;
+        }
+    }
+}
+
+.type {
+    font-size: 23px;
+    font-weight: 400;
+    color: #00BEE8;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    word-break: break;
+}
+
+.projectDescription {
+    width: 513px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.liveTest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 152px;
+    height: 58px;
+    gap: 10px;
+    border-radius: 10px;
+    font-size: 23px;
+    border: 0;
+    text-decoration: none;
+    background-color: #4B47FF;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #00BEE8;
+        cursor: pointer;
+    }
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 152px;
+    height: 58px;
+    gap: 10px;
+    border-radius: 10px;
+    font-size: 23px;
+    text-decoration: none;
+    background-color: #141D2F;
+    border: 1px solid #00BEE8;
+    transition: background-color 0.2s ease-in-out;
+    
+    &:hover {
+        background-color: #00BEE8;
+        cursor: pointer;
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: 70px;
+}

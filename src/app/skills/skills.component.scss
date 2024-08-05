@@ -1,6 +1,6 @@
 .skills {
-    height: 100vh;
-    margin-top: 50px;
+    height: 80vh;
+    margin-top: 80px;
     position: relative;
     left: 100px;
     color: white;
@@ -18,8 +18,9 @@
 .skillsRow {
     display: flex;
     gap: 80px;
-    width: 100%;
+    width: 562px;
     max-width: 100%;
+    flex-wrap: wrap;
 
     >div {
         display: flex;
@@ -28,26 +29,49 @@
         gap: 10px;
         width: 80px;
         height: 80px;
+
+        >img {
+            transition: transform 0.2s;
+        }
+
+        &:hover {
+            >img {
+                transform: translateY(-10px);
+            }
+        }
+
+        >p {
+            text-align: center;
+        }
     }
 }
 
 .skillsText {
     max-width: 560px;
-
-    >div {
-        display: flex;
-        align-items: center;
-        gap: 50px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     >span {
         word-wrap: break-word;
     }
 }
 
-.h3 {
+.skillsHeadline {
     display: flex;
-    >p{
-        color: #00BEE8 !important;
+    align-items: center;
+    gap: 50px;
+}
+
+.looking {
+    display: flex;
+    gap: 8px;
+    
+    >p {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
+        text-align: left;
+        color: #00BEE8;
     }
 }
