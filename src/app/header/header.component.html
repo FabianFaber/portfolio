@@ -17,8 +17,21 @@
 
 
     <div class="navigation">
-        <a>About me</a>
-        <a>Skills</a>
-        <a>Portfolio</a>
+        <img class="burgerMenu" [src]="isDropdownVisible ? './../../assets/img/header/CLOSE FINAL.png' : './../../assets/img/header/burger menu.png'" alt="" (click)="toggleDropdown()">
+        <div>
+            <a>About me</a>
+            <a>Skills</a>
+            <a>Portfolio</a>
+            <a>Contact</a>
+        </div>
+    </div>
+
+    <div class="dropdown" [ngClass]="{'show': isDropdownVisible}">
+        <div class="dropdownSection">
+            <a (click)="toggleDropdown()">About me</a>
+            <a (click)="toggleDropdown()">Skills</a>
+            <a (click)="toggleDropdown()">Portfolio</a>
+            <a (click)="toggleDropdown()">Contact</a>
+        </div>
     </div>
 </header>

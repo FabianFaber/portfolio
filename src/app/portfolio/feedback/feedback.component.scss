@@ -1,7 +1,9 @@
 .feedbackArea {
     padding-left: 100px;
     display: flex;
-    gap: 200px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 .feedback {
@@ -22,7 +24,7 @@
     display: flex;
     width: 665px;
     height: 112px;
-    font-size: 20px;
+    font-size: 15px;
     word-break: break;
 }
 
@@ -49,16 +51,71 @@
     height: 272px;
     border-radius: 1000px;
     border: 4px solid #4B47FF;
+}
 
-    >img {
-        width: 272px;
-        height: 272px;
-        border-radius: 1000px;
-    }
+.feedbackImg img {
+    width: 272px;
+    height: 272px;
+    border-radius: 1000px;
 }
 
 .feedbackLine {
     height: 4px;
     width: 250px;
     background-color: #4B47FF;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: -30px;
+}
+
+.right-arrow {
+    right: -30px;
+}
+
+.indicators {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicators span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4B47FF;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00BEE8 !important;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #4B47FF !important; 
 }

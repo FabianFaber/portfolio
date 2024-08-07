@@ -1,48 +1,147 @@
 header {
-    height: 110px;
-    position: sticky;
-    top: 0;
-    background-color: #141D2F;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 99;
+  height: 110px;
+  position: sticky;
+  top: 0;
+  background-color: #141D2F;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  align-items: center;
+  z-index: 99;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 110px;
+  right: -100vw;
+  height: 98vh;
+  width: 100vw;
+  color: white;
+  font-size: 23px;
+  background-color: rgba(20, 29, 47, 0.9);
+  z-index: 5;
+  transition: right 0.5s ease-in-out;
+
+  &.show {
+    display: block;
+    right: 0;
+  }
+
+  >a {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.dropdownSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  gap: 50px;
 }
 
 .logo {
-    width: 135px;
+  width: 135px;
 
-    .cls-1 {
-        fill: #00bee8;
-    }
+  .cls-1 {
+    fill: #00bee8;
+  }
 
-    .cls-1,
-    .cls-2,
-    .cls-3 {
-        stroke-width: 0px;
-    }
+  .cls-1,
+  .cls-2,
+  .cls-3 {
+    stroke-width: 0px;
+  }
 
-    .cls-2 {
-        fill: #4b47ff;
-    }
+  .cls-2 {
+    fill: #4b47ff;
+  }
 
-    .cls-3 {
-        fill: #fff;
-    }
+  .cls-3 {
+    fill: #fff;
+  }
 }
 
 .navigation {
+  >img {
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  >div {
     display: flex;
     gap: 20px;
 
     >a {
-        color: white;
-        font-size: 23px;
-        font-weight: 400;
+      color: white;
+      font-size: 23px;
+      font-weight: 400;
 
-        &:hover {
-            color: #00BEE8;
-            cursor: pointer;
-        }
+      &:hover {
+        color: #00BEE8;
+        cursor: pointer;
+      }
     }
+  }
+}
+
+@media (max-width: 850px) {
+  .navigation {
+    >div {
+      display: none;
+    }
+  }
+
+  .burgerMenu {
+    display: block !important;
+  }
+
+  .dropdownSection {
+
+    >a {
+      text-decoration: none;
+      color: white;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00BEE8;
+        transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+          width: 50px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 520px) {
+  header {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    >svg {
+      width: 100px;
+    }
+  }
 }

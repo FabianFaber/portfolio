@@ -8,7 +8,6 @@ import { Feedback } from '../../interface/feedback';
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.scss']
 })
-
 export class FeedbackComponent {
   feedbacks: Feedback[] = [
     {
@@ -18,16 +17,28 @@ export class FeedbackComponent {
       image: './../../../assets/img/projects/testBild.png',
     },
     {
-      name: 'Michael Schuster',
-      feedback: 'Michael really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
+      name: 'Daniela O.',
+      feedback: 'I was really fortunate to be on a team with Fabian at DA. Working with him is straightforward and well-structured. Thanks to the excellent communication within the team and his tireless dedication, we were able to achieve our goal on schedule and successfully complete our project. He is an outstanding teammate, and I would welcome the opportunity to work on more projects with him. I wish him all the best for the future.',
       role: 'Team Partner',
       image: './../../../assets/img/projects/testBild.png',
     },
-    {
-      name: 'John Doe',
-      feedback: 'John consistently brings innovative ideas and solutions to the table. His technical expertise and dedication are unmatched.',
-      role: 'Project Manager',
-      image: './../../../assets/img/projects/testBild.png',
-    },
   ];
+
+  currentFeedbackIndex: number = 0;
+
+  get currentFeedback() {
+    return this.feedbacks[this.currentFeedbackIndex];
+  }
+
+  nextFeedback() {
+    this.currentFeedbackIndex = (this.currentFeedbackIndex + 1) % this.feedbacks.length;
+  }
+
+  prevFeedback() {
+    this.currentFeedbackIndex = (this.currentFeedbackIndex - 1 + this.feedbacks.length) % this.feedbacks.length;
+  }
+
+  setFeedbackIndex(index: number) {
+    this.currentFeedbackIndex = index;
+  }
 }

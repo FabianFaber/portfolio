@@ -1,0 +1,167 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 150px;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.line {
+    height: 4px;
+    width: 730px;
+    background-color: #4B47FF;
+}
+
+.headline {
+    text-align: center;
+}
+
+.contactSection {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.contactText {
+    width: 473px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    >span {
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
+.contactInput {
+    color: white;
+    width: 617px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    >div {
+
+        display: flex;
+        gap: 10px;
+
+        >a {
+            color: #4B47FF;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.inputThose {
+    display: flex;
+    flex-direction: column;
+    width: 617px;
+
+    >p {
+        font-size: 14px;
+        color: red;
+    }
+
+    >input {
+        height: 20px;
+        border: 1px solid #4B47FF;
+        border-radius: 8px;
+        background-color: #141D2F;
+        color: white;
+        font-size: 16px;
+        padding: 15px 25px 15px 25px;
+
+        &::placeholder {
+            font-size: 16px;
+            color: white;
+        }
+    }
+
+    >textarea {
+        height: 1000px;
+        resize: none;
+        font-family: 'Poppins';
+        height: 203px;
+        border: 1px solid #4B47FF;
+        border-radius: 8px;
+        background-color: #141D2F;
+        color: white;
+        font-size: 16px;
+        padding: 15px 25px 15px 25px;
+
+        &::placeholder {
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+        }
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    >button {
+        width: 195px;
+        height: 49px;
+        width: Hug (195px)px;
+        padding: 15px 30px 15px 30px;
+        gap: 10px;
+        border: 0;
+        border-radius: 10px;
+        background-color: #B6B6B6;
+        font-size: 16px;
+        color: white;
+    }
+}
+
+.inputPolicy {
+    display: flex;
+    flex-direction: column;
+
+    >div {
+        display: flex;
+        font-size: 14px;
+        gap: 10px;
+
+        >p {
+            >a {
+                text-decoration: none;
+                color: #4B47FF;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        >img {
+            width: 20px;
+
+            &:hover {
+                cursor: pointer;
+                border-radius: 50px;
+                background-color: #183771;
+            }
+        }
+    }
+
+    >p {
+        font-size: 14px;
+        color: red;
+    }
+}
