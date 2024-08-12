@@ -197,6 +197,8 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
   font-family: 'Poppins';
   background-color: #141D2F;
@@ -214,6 +216,7 @@ h2 {
   text-align: left;
   color: white;
   margin: 0;
+  z-index: 80;
 }
 
 h3 {
@@ -226,4 +229,16 @@ h3 {
 
 .d-none {
   display: none;
+}
+
+@media (max-width: 1500px) {
+  h2 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 50px;
+  }
 }

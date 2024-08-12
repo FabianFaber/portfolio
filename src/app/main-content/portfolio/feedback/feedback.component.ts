@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Feedback } from '../../interface/feedback';
+import { Feedback } from '../../../interface/feedback';
 
 @Component({
   selector: 'app-feedback',

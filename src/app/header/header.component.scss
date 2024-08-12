@@ -1,5 +1,6 @@
 header {
   height: 110px;
+  width: 100vw;
   position: sticky;
   top: 0;
   background-color: #141D2F;
@@ -9,6 +10,7 @@ header {
   padding-right: 100px;
   align-items: center;
   z-index: 99;
+  max-width: 1920px;
 }
 
 .dropdown {
@@ -137,8 +139,9 @@ header {
 
 @media (max-width: 520px) {
   header {
-    padding-left: 40px;
-    padding-right: 40px;
+    // padding-left: 40px;
+    // padding-right: 40px;
+    justify-content: space-around;
 
     >svg {
       width: 100px;

@@ -1,4 +1,6 @@
 section {
+    max-width: 1920px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -7,6 +9,7 @@ section {
 
 .test {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -29,7 +32,7 @@ section {
 }
 
 .contactText {
-    width: 473px;
+    max-width: 473px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -67,7 +70,7 @@ section {
 .inputThose {
     display: flex;
     flex-direction: column;
-    width: 617px;
+    max-width: 617px;
 
     >p {
         font-size: 14px;
@@ -135,6 +138,7 @@ section {
 
     >div {
         display: flex;
+        align-items: center;
         font-size: 14px;
         gap: 10px;
 
@@ -151,6 +155,7 @@ section {
 
         >img {
             width: 20px;
+            height: 20px;
 
             &:hover {
                 cursor: pointer;
@@ -163,5 +168,132 @@ section {
     >p {
         font-size: 14px;
         color: red;
+    }
+}
+
+@media (max-width: 1300px) {
+    .contactInput {
+        max-width: 450px;
+    }
+
+    .inputThose {
+        max-width: 450px;
+    }
+
+    .contactSection {
+        justify-content: space-between;
+    }
+
+    .inputPolicy {
+        max-width: 500px;
+        word-break: break;
+    }
+}
+
+@media (max-width: 1150px) {
+    .contactText {
+        width: 350px;
+
+        >span {
+            font-size: 25px;
+        }
+    }
+
+    .contactInput {
+        max-width: 350px;
+    }
+
+    .inputThose {
+        max-width: 350px;
+    }
+
+    .contactSection {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 860px) {
+    .contactSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .contactInput {
+        max-width: 550px;
+    }
+
+    .inputThose {
+        max-width: 550px;
+    }
+
+    .contactText {
+        width: 550px;
+    }
+}
+
+@media (max-width: 690px) {
+    .contactInput {
+        max-width: 350px;
+    }
+
+    .inputThose {
+        max-width: 350px;
+    }
+
+    .contactText {
+        width: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contactText {
+        >p {
+            font-size: 13px;
+        }
+    }
+
+    .inputThose {
+        >p {
+            font-size: 10px;
+        }
+    }
+
+    .inputPolicy {
+        >p {
+            font-size: 10px;
+        }
+        
+    }
+}
+
+@media (max-width: 440px) {
+    .contactInput {
+        max-width: 250px;
+    }
+
+    .inputThose {
+        max-width: 250px;
+    }
+
+    .contactText {
+        width: 250px;
+    }
+
+    .input {
+        >button {
+            width: 150px;
+            height: 49px;
+            font-size: 13px;
+        }
+    }
+
+    .inputPolicy {
+
+        >div {
+            >p {
+                font-size: 10px;
+            }
+        }
     }
 }

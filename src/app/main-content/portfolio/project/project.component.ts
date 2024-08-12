@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Project } from '../../interface/project';
+import { Project } from '../../../interface/project';
 import { CommonModule } from '@angular/common';
 
 @Component({

@@ -1,0 +1,243 @@
+.skills {
+    margin-top: 80px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    max-width: 1920px;
+    z-index: 80;
+    // padding-left: 100px;
+    // padding-right: 100px;
+}
+
+.skillsSektion {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    z-index: 80;
+}
+
+.talkBtn {
+    padding: 15px 30px 15px 30px;
+    border: 0;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 23px;
+    background-color: #00BEE8;
+    z-index: 80;
+
+    &:not(.aboveTheFold) {
+        color: white;
+    }
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: #4B47FF;
+        cursor: pointer;
+    }
+}
+
+.skillsRow {
+    display: flex;
+    gap: 80px;
+    width: 562px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    z-index: 80;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 80px;
+        height: 80px;
+
+        >img {
+            transition: transform 0.2s;
+        }
+
+        &:hover {
+            >img {
+                transform: translateY(-10px);
+            }
+        }
+
+        >p {
+            text-align: center;
+        }
+    }
+}
+
+.skillsText {
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 80;
+
+    >span {
+        word-wrap: break-word;
+    }
+}
+
+.skillsHeadline {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.looking {
+    display: flex;
+    gap: 8px;
+
+    >p {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38.4px;
+        text-align: left;
+        color: #00BEE8;
+    }
+}
+
+@media (max-width: 1400px) {
+    .skillsRow {
+        gap: 60px;
+        width: 400px;
+        flex-wrap: wrap;
+    }
+
+    .skillsText {
+        width: 500px;
+
+        >span {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .skillsText {
+        width: 400px;
+
+        >span {
+            font-size: 14px;
+        }
+    }
+
+    .skillsRow {
+        >div {
+
+            width: 60px;
+            height: 60px;
+
+        }
+    }
+
+    .looking {
+        h3 {
+            font-size: 23px;
+        }
+
+        >p {
+            font-size: 23px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .skills {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 100px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .skillsSektion {
+        width: 80%;
+    }
+
+    .skillsText {
+        max-width: 100%;
+        padding-right: 0;
+        width: 80%;
+
+        >span {
+            font-size: 16px;
+        }
+    }
+
+    .skillsRow {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        gap: 70px;
+        width: 100%;
+    }
+
+    .looking {
+        h3 {
+            font-size: 30px;
+        }
+
+        >p {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .looking {
+        h3 {
+            font-size: 20px;
+        }
+
+        >p {
+            font-size: 20px;
+        }
+    }
+
+    .talkBtn {
+        font-size: 16px;
+        width: 150px;
+    }
+
+    .skillsSektion{
+        width: 280px;
+    }
+
+    .skillsText {
+        width: 280px;
+        >span {
+            font-size: 13px;
+        }
+    }
+
+    .skillsRow {
+        >div {
+            >img{
+                width: 40px;
+                height: 40px;
+            }
+
+            >p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .looking {
+        h3 {
+            font-size: 18px;
+        }
+
+        >p {
+            font-size: 18px;
+        }
+    }
+}

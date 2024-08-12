@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-about-me',

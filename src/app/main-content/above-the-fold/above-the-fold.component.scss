@@ -7,7 +7,7 @@
     justify-content: center;
     gap: 50px;
     color: white;
-    background-image: url('./../../assets/img/above-the-fold/background_blue.png'), url('./../../assets/img/above-the-fold/background_green.png');
+    background-image: url('./../../../assets/img/above-the-fold/background_blue.png'), url('./../../../assets/img/above-the-fold/background_green.png');
     background-position: left -20%, right -300%;
     background-repeat: no-repeat, no-repeat;
 }
@@ -63,7 +63,7 @@
 
 .hyperLinks {
     position: absolute;
-    left: 0;
+    left: 270px;
     bottom: 50px;
     display: flex;
     align-items: center;
@@ -81,7 +81,7 @@
 
 .scrollDown {
     position: absolute;
-    right: 50px;
+    right: 250px;
     bottom: 120px;
     display: flex;
     align-items: center;

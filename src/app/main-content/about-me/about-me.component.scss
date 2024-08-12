@@ -1,0 +1,196 @@
+.aboutMe {
+    max-width: 1920px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutMeContent {
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 471px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.attributes {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.attribute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    z-index: 1;
+
+    >svg {
+        flex-shrink: 0;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        >svg {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.photoMe {
+    background-image: url('./../../../assets/img/about-me/purple_shadow.png'), url('./../../../assets/img/about-me/green_shadow.png');
+    background-position: left, right 100%;
+    background-repeat: no-repeat, no-repeat;
+
+    >img {
+        margin-top: 120px;
+        margin-right: 100px;
+        width: 700px;
+        z-index: 2;
+    }
+
+}
+
+.seperator {
+    position: absolute;
+    bottom: -1400px;
+    left: 0;
+    right: 0;
+    background-image: url('./../../../assets/img/about-me/seperator.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: right 1%;
+    height: 880px;
+    max-width: 1920px;
+    z-index: 0;
+}
+
+@media (max-width: 1500px) {
+    .aboutMeContent {
+        gap: 20px;
+        width: 400px;
+        margin-right: 0;
+    }
+
+    .photoMe {
+        >img {
+            width: 450px;
+        }
+    }
+
+    .aboutMeContent {
+        >span {
+            font-size: 14px;
+            z-index: 80;
+        }
+    }
+
+    .attribute {
+        >span {
+            font-size: 14px;
+        }
+    }
+
+    .seperator {
+        bottom: -1350px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .photoMe {
+        >img {
+            margin-right: 0px;
+        }
+    }
+
+    .aboutMeContent {
+        >span {
+            font-size: 12px;
+        }
+    }
+
+    .attribute {
+        gap: 20px;
+
+        >svg {
+            width: 30px;
+        }
+
+        >span {
+            font-size: 12px;
+        }
+    }
+
+    .seperator {
+        bottom: -1360px;
+    }
+}
+
+@media (max-width: 960px) {
+    .aboutMe {
+        flex-direction: column-reverse;
+    }
+
+    .photoMe {
+        >img {
+            margin-top: 20px;
+        }
+    }
+
+    .aboutMeContent{
+        margin-left: 0;
+        margin-right: 0;
+        width: 80%;
+    }
+
+    .seperator {
+        bottom: -1250px;
+    }
+
+    .aboutMeContent {
+        >span {
+            font-size: 16px;
+        }
+    }
+
+    .attribute {
+        gap: 20px;
+
+        >span {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .photoMe {
+        >img {
+            margin-top: 20px;
+            width: 300px;
+        }
+    }
+
+    .seperator {
+        bottom: -1100px;
+    }
+
+    .aboutMeContent {
+        width: 280px;
+    }
+
+    .aboutMeContent {
+        >span {
+            font-size: 13px;
+        }
+    }
+
+    .attribute {
+        >span {
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.portfolio {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 150px;
+}
+
+.project {
+    margin-top: 30px;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+
+    >p {
+        color: white;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .portfolio {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 730px) {
+.headline {
+    >p {
+        width: 500px;
+    }
+}
+}
+
+@media (max-width: 500px) {
+.headline {
+    >p {
+        width: 280px;
+        font-size: 13px;
+    }
+}
+}
