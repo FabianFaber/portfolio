@@ -19,8 +19,8 @@ export class ProjectComponent {
         type: 'HTML | CSS | Firebase',
         description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         link: {
-          liveTest: 'John',
-          github: 'Looking Good!',
+          liveTest: 'https://join.fabian-faber.de',
+          github: 'https://github.com/FabianFaber/JOIN',
         },
       },
       {
@@ -29,8 +29,8 @@ export class ProjectComponent {
         type: 'JavaScript | HTML | CSS',
         description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
         link: {
-          liveTest: 'John',
-          github: 'Looking Good!',
+          liveTest: 'https://pololoco.fabian-faber.de',
+          github: 'https://github.com/FabianFaber/Polo_Loco',
         },
       },
       {
@@ -39,7 +39,7 @@ export class ProjectComponent {
         type: 'Angular | Firebase',
         description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
         link: {
-          liveTest: 'John',
+          liveTest: 'https://simplecrm.fabian-faber.de',
           github: 'Looking Good!',
         },
       },
@@ -49,8 +49,8 @@ export class ProjectComponent {
         type: 'JavaScript | HTML | CSS | Api',
         description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
         link: {
-          liveTest: 'John',
-          github: 'Looking Good!',
+          liveTest: 'https://pokedex.fabian-faber.de',
+          github: 'https://github.com/FabianFaber/pokedex',
         },
       }
     ]
