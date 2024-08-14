@@ -6,13 +6,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterModule, TranslateModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   translate = inject(TranslationService);
@@ -25,8 +24,9 @@ export class ContactComponent {
     policy: false
   }
 
-  mailTest = false;
   formSubmitted = false;
+  showPopup = false;
+  hidePopup = true;
 
   onPolicyChange(event: any) {
   }
@@ -43,13 +43,12 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    this.formSubmitted = true; 
+    this.formSubmitted = true;
 
     if (ngForm.valid && this.contactData.policy) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log('Form submitted successfully');
             this.contactData = {
               name: "",
               email: "",
@@ -57,22 +56,18 @@ export class ContactComponent {
               policy: false
             };
             ngForm.resetForm();
+            this.formSubmitted = false;
+            this.showPopup = true;
+            this.hidePopup = false;
+            setTimeout(() => this.hidePopup= true, 3000); 
           },
           error: (error) => {
             console.error('Submission error:', error);
-            this.formSubmitted = false;
           },
-          complete: () => console.info('send post complete'),
         });
     } else {
       console.error('Form is invalid or policy checkbox is not checked');
-      this.formSubmitted = false; 
     }
-  }
-
-
-  isFormValid(ngForm: NgForm) {
-    return ngForm.valid && this.contactData.policy;
   }
 
   scrollToTop() {

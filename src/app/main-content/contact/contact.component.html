@@ -1,73 +1,79 @@
 <section id="contact">
-  <img class="blue" src="./../../../assets/img/contact/blue.png" alt="">
+  <img class="blue" src="./../../../assets/img/projects/blue2.png" alt="">
   <div class="test">
-    <!-- <div class="line"></div> -->
-    <h2 class="headline">Contact</h2>
+    <h2 class="headline">{{'headerContact' | translate}}</h2>
   </div>
   <div class="contactSection">
     <div class="contactText">
       <span>{{'contact' | translate}}</span>
-      <p>{{'contactForm' | translate}} <br>
-      </p>
+      <p>{{'contactForm' | translate}} <br></p>
       <p>{{'contactNeed' | translate}} <b>{{'contactMe' | translate}}</b></p>
     </div>
     <div class="input">
-      <form class="contactInput" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <div class="input-container">
-          <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
-              placeholder="{{'formName' | translate}}" required
-              [ngClass]="{'invalid': name.invalid && name.touched, 'valid': name.valid && name.touched}">
-          <p *ngIf="name.invalid && name.touched">{{'nameReq' | translate}}</p>
-      </div>
-  
-      <div class="input-container">
-          <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
-              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="{{'formMail' | translate}}"
-              required
-              [ngClass]="{'invalid': !email.valid && email.touched, 'valid': email.valid && email.touched}">
-          <p *ngIf="!email.valid && email.touched">{{'mailReq' | translate}}</p>
-      </div>
-  
-      <div class="input-container">
-          <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" id="message" name="message"
-              placeholder="{{'formMsg' | translate}}" required
-              [ngClass]="{'invalid': !message.valid && message.touched, 'valid': message.valid && message.touched}"></textarea>
-          <p *ngIf="!message.valid && message.touched">{{'msgReq' | translate}}</p>
-      </div>
-
-        <div class="inputPolicy">
-          <div>
-            <div class="checkbox-wrapper-30">
-              <span class="checkbox">
-                <input #policy="ngModel" [(ngModel)]="contactData.policy" type="checkbox" [ngModelOptions]="{standalone: true}" (change)="onPolicyChange($event)" required />
-                <svg>
-                  <use xlink:href="#checkbox-30" class="checkbox"></use>
-                </svg>
-              </span>
-              <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-                <symbol id="checkbox-30" viewBox="0 0 22 22">
-                  <path fill="none" stroke="#00BEE8"
-                    d="M5.5,11.3L9,14.8L20.2,3.3l0,0c-0.5-1-1.5-1.8-2.7-1.8h-13c-1.7,0-3,1.3-3,3v13c0,1.7,1.3,3,3,3h13 c1.7,0,3-1.3,3-3v-13c0-0.4-0.1-0.8-0.3-1.2" />
-                </symbol>
-              </svg>
-            </div>
-            <p>{{'formPolicy' | translate}} <a routerLink="/privatpolicy">{{'formPolicy2' | translate}}</a>
-              {{'formPolicy3' |
-              translate}}</p>
-          </div>
-          @if (!policy.valid && policy.touched && !formSubmitted) {
-            <p>{{'policyReg' | translate}}</p>
-          } 
+      <!-- Popup container added here -->
+      <div class="popup-container">
+        <div class="popup" [ngClass]="{'show': showPopup, 'hide': hidePopup}">
+          {{'messageSent' | translate}}
         </div>
+        
+        <form class="contactInput" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <div class="input-container">
+            <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
+                placeholder="{{'formName' | translate}}" required
+                [ngClass]="{'invalid': name.invalid && name.touched, 'valid': name.valid && name.touched}">
+            <p *ngIf="name.invalid && name.touched">{{'nameReq' | translate}}</p>
+          </div>
+    
+          <div class="input-container">
+            <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" placeholder="{{'formMail' | translate}}"
+                required
+                [ngClass]="{'invalid': !email.valid && email.touched, 'valid': email.valid && email.touched}">
+            <p *ngIf="!email.valid && email.touched">{{'mailReq' | translate}}</p>
+          </div>
+    
+          <div class="input-container">
+            <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" id="message" name="message"
+                placeholder="{{'formMsg' | translate}}" required
+                [ngClass]="{'invalid': !message.valid && message.touched, 'valid': message.valid && message.touched}"></textarea>
+            <p *ngIf="!message.valid && message.touched">{{'msgReq' | translate}}</p>
+          </div>
 
+          <div class="inputPolicy">
+            <div>
+              <div class="checkbox-wrapper-30">
+                <span class="checkbox">
+                  <input #policy="ngModel" [(ngModel)]="contactData.policy" type="checkbox" 
+                  [ngModelOptions]="{standalone: true}" (change)="onPolicyChange($event)" required />
+                  <svg>
+                    <use xlink:href="#checkbox-30" class="checkbox"></use>
+                  </svg>
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                  <symbol id="checkbox-30" viewBox="0 0 22 22">
+                    <path fill="none" stroke="#00BEE8"
+                      d="M5.5,11.3L9,14.8L20.2,3.3l0,0c-0.5-1-1.5-1.8-2.7-1.8h-13c-1.7,0-3,1.3-3,3v13c0,1.7,1.3,3,3,3h13 c1.7,0,3-1.3,3-3v-13c0-0.4-0.1-0.8-0.3-1.2" />
+                  </symbol>
+                </svg>
+              </div>
+              <p>{{'formPolicy' | translate}} <a routerLink="/privatpolicy">{{'formPolicy2' | translate}}</a>
+                {{'formPolicy3' | translate}}</p>
+            </div>
+            
+            <!-- Fehlermeldung wird nur angezeigt, wenn das Formular übermittelt wurde und die Policy nicht akzeptiert wurde -->
+            <p *ngIf="formSubmitted && !contactData.policy">
+              {{'policyReg' | translate}}
+            </p>
+            
+          </div>
 
-        <input class="submit" 
-       type="submit" 
-       value="Send message"
-       [ngClass]="{'invalid': !contactForm.form.valid, 'valid': contactForm.form.valid}" [disabled]="!contactForm.form.valid"
-       >
-
-      </form>
+          <input class="submit" 
+                 type="submit" 
+                 value="{{'sendBtn' | translate}}"
+                 [ngClass]="{'invalid': !contactForm.form.valid, 'valid': contactForm.form.valid}" 
+                 [disabled]="!contactForm.form.valid">
+        </form>
+      </div>
     </div>
   </div>
   <a id="backToTop" (click)="scrollToTop()" class="backToTop">

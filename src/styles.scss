@@ -210,7 +210,7 @@ p {
 }
 
 h2 {
-  font-size: 90px;
+  font-size: 85px;
   font-weight: 700;
   line-height: 108px;
   text-align: left;
@@ -231,15 +231,21 @@ h3 {
   display: none;
 }
 
+@media (min-width: 1920px) {
+ body {
+  overflow-x: scroll;
+ }
+}
+
 @media (max-width: 1500px) {
   h2 {
     font-size: 70px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1020px) {
   h2 {
-    font-size: 60px;
+    font-size: 58px;
   }
 }
 

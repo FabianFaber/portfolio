@@ -5,6 +5,8 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class TranslationService {
+currentLang: any;
+
   instant(key: string): string {
     return this.translate.instant(key);
   }

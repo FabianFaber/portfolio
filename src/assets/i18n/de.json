@@ -27,5 +27,13 @@
     "msgReq": "Deine Nachricht ist leer. Bitte mehr als 10 Zeichen eingeben.",
     "policyReg": "Bitte akzeptiere die Datenschutzbestimmungen.",
     "feedbackOkan": "Fabian zeichnet sich durch seine außergewöhnliche Sorgfalt und starke Arbeitsmoral aus. Sein teamorientierter Ansatz fördert stets eine positive und produktive Atmosphäre. Besonders beeindruckend sind seine herausragenden JavaScript-Kenntnisse, die er effektiv in unsere Projekte einbringt. Dank seiner technischen Expertise und Hingabe haben wir zahlreiche Erfolge erzielt. Es war eine Freude, mit Fabian zusammenzuarbeiten – er ist zweifellos eine unschätzbare Bereicherung für unser Team.",
-    "feedbackDaniela": "Ich hatte wirklich Glück, mit Fabian bei der DA in einem Team zu sein. Die Arbeit mit ihm ist unkompliziert und gut strukturiert. Dank der guten Kommunikation im Team und seinem unermüdlichen Engagement konnten wir unser Ziel planmäßig erreichen und unser Projekt erfolgreich abschließen. Er ist ein hervorragender Teamkollege, und ich würde mich über weitere Projekte mit ihm freuen. Ich wünsche ihm alles Gute für die Zukunft."
+    "feedbackDaniela": "Ich hatte wirklich Glück, mit Fabian bei der DA in einem Team zu sein. Die Arbeit mit ihm ist unkompliziert und gut strukturiert. Dank der guten Kommunikation im Team und seinem unermüdlichen Engagement konnten wir unser Ziel planmäßig erreichen und unser Projekt erfolgreich abschließen. Er ist ein hervorragender Teamkollege, und ich würde mich über weitere Projekte mit ihm freuen. Ich wünsche ihm alles Gute für die Zukunft.",
+    "headerAbout": "Über mich",
+    "headerContact": "Kontakt",
+    "scroll": "Scroll runter",
+    "talkBtn": "Lass uns reden!",
+    "sendBtn": "Abschicken",
+    "messageSent": "Nachricht gesendet!",
+    "impressum": "Impressum",
+    "source": "Quelle"
 }

@@ -25,3 +25,39 @@ section {
         }
     }
 }
+
+.backToTop {
+    rotate: -90deg;
+    position: absolute;
+    right: 100px;
+    top: 130px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.backToTop svg {
+    transition: fill 0.3s ease-in-out;
+}
+
+.backToTop:hover svg rect {
+    stroke: #00BEE8;
+}
+
+.backToTop:hover svg path {
+    fill: #00BEE8;
+}
+
+@media (max-width: 850px) {
+    .backToTop {
+        right: 25px;
+    }
+
+    section {
+        >h2 {
+            font-size: 20px !important;
+            line-height: 1;
+        }
+    }
+}

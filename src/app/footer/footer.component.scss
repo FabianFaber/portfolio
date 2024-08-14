@@ -1,12 +1,19 @@
 footer {
     height: 291px;
     width: 98vw;
-    max-width: 1920px;
     background-color: #141D2F;
     border-top: 4px solid #00BEE8;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+
+}
+
+.content {
+    max-width: 1920px;
+    width: 98vw;
+    display: flex;
+    justify-content: space-around;
     color: white;
 }
 
@@ -92,7 +99,7 @@ footer {
 }
 
 @media (max-width: 1600px) {
-    footer {
+    .content {
         justify-content: space-around;
     }
 
@@ -106,12 +113,14 @@ footer {
 }
 
 @media (max-width: 800px) {
-    footer {
+    .content {
         padding-top: 50px;
         padding-bottom: 50px;
         padding-left: 0;
         padding-right: 0;
+        align-items: center;
         flex-direction: column;
+        gap: 20px;
     }
 
     .logo {
