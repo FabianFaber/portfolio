@@ -48,6 +48,18 @@
             <a (click)="scrollToSectionDropdown('skills')">Skills</a>
             <a (click)="scrollToSectionDropdown('portfolio')">Portfolio</a>
             <a (click)="scrollToSectionDropdown('contact')">Contact</a>
+            <div class="translate">
+                <img src="./../../assets/img/header/usa.png" alt="">
+                <div class="button r" id="button-6">
+                    <input type="checkbox" class="checkbox" [checked]="isGermanChecked"
+                        (change)="onLanguageChange($event)" />
+                    <div class="knobs">
+                        <span></span>
+                    </div>
+                    <div class="layer"></div>
+                </div>
+                <img src="./../../assets/img/header/germany.png" alt="">
+            </div>
         </div>
     </div>
 

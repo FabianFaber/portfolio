@@ -43,7 +43,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    this.formSubmitted = true; // Formular als abgesendet markieren
+    this.formSubmitted = true; 
 
     if (ngForm.valid && this.contactData.policy) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -60,13 +60,13 @@ export class ContactComponent {
           },
           error: (error) => {
             console.error('Submission error:', error);
-            this.formSubmitted = false; // Fehlerfall, damit die Fehlermeldungen wieder angezeigt werden können
+            this.formSubmitted = false;
           },
           complete: () => console.info('send post complete'),
         });
     } else {
       console.error('Form is invalid or policy checkbox is not checked');
-      this.formSubmitted = false; // Falls die Policy-Checkbox nicht überprüft wurde und das Formular ungültig ist
+      this.formSubmitted = false; 
     }
   }
 
