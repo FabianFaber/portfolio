@@ -1,10 +1,43 @@
 section {
+    position: relative;
+    height: 80vh;
+    width: 100vw;
     max-width: 1920px;
-    margin-top: 150px;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     gap: 50px;
     padding-bottom: 150px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.backToTop {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.backToTop svg {
+    transition: fill 0.3s ease-in-out;
+}
+
+.backToTop:hover svg rect {
+    stroke: #00BEE8;
+}
+
+.backToTop:hover svg path {
+    fill: #00BEE8;
+}
+
+.blue {
+    position: absolute;
+    z-index: -1;
+    bottom: -300px;
 }
 
 .checkbox-wrapper-30 {
@@ -132,7 +165,7 @@ section {
     width: 617px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 
     >div {
 
@@ -150,49 +183,115 @@ section {
     }
 }
 
-.inputThose {
+input[type=text],
+[type=email],
+select {
+    font-family: 'Poppins';
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4B47FF;
+    box-sizing: border-box;
+    resize: vertical;
+    border-radius: 10px;
+    background-color: #141D2F;
+
+    &::placeholder {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+    }
+}
+
+textarea {
+    font-family: 'Poppins';
+    color: white;
+    resize: none;
+    border: 1px solid #4B47FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #141D2F;
+    height: 203px;
+    padding: 12px;
+
+    &::placeholder {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+    }
+}
+
+input[type=submit] {
+    background-color: #4B47FF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type=submit].invalid {
+    background-color: #00BEE8; /* Rot für ungültige Formulare */
+}
+
+input[type=submit].valid {
+    background-color: #4B47FF; /* Grün für gültige Formulare */
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    max-width: 617px;
 
     >p {
-        font-size: 14px;
+        font-size: 12px;
         color: red;
     }
+}
 
-    >input {
-        height: 20px;
-        border: 1px solid #4B47FF;
-        border-radius: 8px;
-        background-color: #141D2F;
-        color: white;
-        font-size: 16px;
-        padding: 15px 25px 15px 25px;
+.input-container input,
+.input-container textarea {
+    border: 1px solid #4B47FF;
+    background-color: #141D2F;
+    color: white;
+    font-family: 'Poppins';
+    padding: 12px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    background-repeat: no-repeat;
+    background-position: right 10px top 10px;
+    background-size: 20px 20px; 
+}
 
-        &::placeholder {
-            font-size: 16px;
-            color: white;
-        }
-    }
+.input-container input.invalid,
+.input-container textarea.invalid {
+    border-color: red;
+    background-image: url('./../../../assets/img/contact/required.png');
+}
 
-    >textarea {
-        height: 1000px;
-        resize: none;
-        font-family: 'Poppins';
-        height: 203px;
-        border: 1px solid #4B47FF;
-        border-radius: 8px;
-        background-color: #141D2F;
-        color: white;
-        font-size: 16px;
-        padding: 15px 25px 15px 25px;
+.input-container input.valid,
+.input-container textarea.valid {
+    border-color: green;
+    background-image: url('./../../../assets/img/contact/checkmark.png');
+}
 
-        &::placeholder {
-            font-size: 16px;
-            font-weight: 400;
-            color: white;
-        }
-    }
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.input-container input.invalid::placeholder,
+.input-container textarea.invalid::placeholder {
+    color: red;
+}
+
+.input-container input.valid::placeholder,
+.input-container textarea.valid::placeholder {
+    color: green;
 }
 
 .input {
@@ -205,14 +304,22 @@ section {
 .submit {
     width: 195px;
     height: 49px;
-    width: Hug (195px)px;
-    padding: 15px 30px 15px 30px;
-    gap: 10px;
+    padding: 15px 30px;
     border: 0;
     border-radius: 10px;
-    background-color: #B6B6B6;
     font-size: 16px;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #B6B6B6;
+}
+
+.submit-valid {
+    background-color: #00BEE8;
+}
+
+.submit-invalid {
+    background-color: #B6B6B6;
 }
 
 
@@ -250,7 +357,7 @@ section {
     }
 
     >p {
-        font-size: 14px;
+        font-size: 12px;
         color: red;
     }
 }
@@ -297,10 +404,21 @@ section {
 }
 
 @media (max-width: 860px) {
+    section {
+        height: 110vh;
+    }
+
     .contactSection {
         flex-direction: column;
         align-items: center;
         gap: 50px;
+    }
+
+    .blue {
+        position: absolute;
+        z-index: -1;
+        left: -250px;
+        bottom: -500px;
     }
 
     .contactInput {
@@ -313,6 +431,12 @@ section {
 
     .contactText {
         width: 550px;
+    }
+
+    .backToTop {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
     }
 }
 
@@ -378,5 +502,11 @@ section {
                 font-size: 10px;
             }
         }
+    }
+}
+
+@media (max-height: 670px) {
+    section {
+        height: 150vh;
     }
 }

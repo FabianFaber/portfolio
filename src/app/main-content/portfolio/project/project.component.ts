@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Project } from '../../../interface/project';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../../translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
+  translate = inject(TranslationService);
 
   projects:
     Project[] = [
@@ -17,9 +20,9 @@ export class ProjectComponent {
         name: 'Join',
         image: './../../../assets/img/projects/join.png',
         type: 'HTML | CSS | Firebase',
-        description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        description: this.translate.instant('portfolioJoin'),
         link: {
-          liveTest: 'https://join.fabian-faber.de',
+          liveTest: 'http://join.fabian-faber.de',
           github: 'https://github.com/FabianFaber/JOIN',
         },
       },
@@ -27,9 +30,9 @@ export class ProjectComponent {
         name: 'El Polo Loco',
         image: './../../../assets/img/projects/polo_loco.png',
         type: 'JavaScript | HTML | CSS',
-        description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+        description: this.translate.instant('portfolioLoco'),
         link: {
-          liveTest: 'https://pololoco.fabian-faber.de',
+          liveTest: 'http://pololoco.fabian-faber.de',
           github: 'https://github.com/FabianFaber/Polo_Loco',
         },
       },
@@ -37,9 +40,9 @@ export class ProjectComponent {
         name: 'Simple CRM',
         image: './../../../assets/img/projects/crm.png',
         type: 'Angular | Firebase',
-        description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
+        description: this.translate.instant('portfolioCrm'),
         link: {
-          liveTest: 'https://simplecrm.fabian-faber.de',
+          liveTest: 'http://simplecrm.fabian-faber.de',
           github: 'Looking Good!',
         },
       },
@@ -47,9 +50,9 @@ export class ProjectComponent {
         name: 'Pokédex',
         image: './../../../assets/img/projects/pokedex.png',
         type: 'JavaScript | HTML | CSS | Api',
-        description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+        description: this.translate.instant('portfolioPoke'),
         link: {
-          liveTest: 'https://pokedex.fabian-faber.de',
+          liveTest: 'http://pokedex.fabian-faber.de',
           github: 'https://github.com/FabianFaber/pokedex',
         },
       }

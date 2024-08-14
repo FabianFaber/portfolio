@@ -1,11 +1,33 @@
 .portfolio {
-    padding-left: 100px;
-    padding-right: 100px;
+    position: relative;
+    width: 100vw;
+    max-width: 1920px;
     margin-top: 150px;
 }
 
 .project {
     margin-top: 30px;
+}
+
+.green {
+    rotate: -90deg;
+    position: absolute;
+    top: -400px;
+    left: -500px;
+    z-index: 7;
+}
+
+.blue {
+    position: absolute;
+    z-index: -1;
+    top: 900px;
+}
+
+.greenBot {
+    rotate: 90deg;
+    position: absolute;
+    top: 1200px;
+    right: -500px;
 }
 
 .headline {
@@ -20,26 +42,69 @@
     }
 }
 
+@media (max-width: 1030px) {
+    .headline {
+        >p {
+            text-align: center;
+            width: 600px;
+        }
+    }
+}
+
 @media (max-width: 960px) {
     .portfolio {
         padding-left: 0;
         padding-right: 0;
     }
+
+    .green {
+        width: 700px;
+        top: -400px;
+        left: -400px;
+    }
+
+    .blue {
+        width: 400px;
+        top: 1300px;
+    }
+
+    .greenBot {
+        width: 700px;
+        top: 2000px;
+        right: -400px;
+    }
 }
 
 @media (max-width: 730px) {
-.headline {
-    >p {
-        width: 500px;
+    .headline {
+        >p {
+            width: 450px;
+        }
     }
-}
 }
 
 @media (max-width: 500px) {
-.headline {
-    >p {
-        width: 280px;
-        font-size: 13px;
+    .headline {
+        >p {
+            width: 280px;
+            font-size: 13px;
+        }
     }
-}
+
+    .green {
+        width: 600px;
+        top: -300px;
+        left: -350px;
+    }
+
+    .blue {
+        width: 300px;
+        top: 1200px;
+    }
+
+    .greenBot {
+        width: 500px;
+        top: 1950px;
+        right: -300px;
+    }
 }

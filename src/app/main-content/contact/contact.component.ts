@@ -4,11 +4,13 @@ import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [RouterLink, RouterModule, TranslateModule, FormsModule],
+  imports: [CommonModule, RouterLink, RouterModule, TranslateModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -20,10 +22,14 @@ export class ContactComponent {
     name: "",
     email: "",
     message: "",
-    policy: ""
+    policy: false
   }
 
-  mailTest = true;
+  mailTest = false;
+  formSubmitted = false;
+
+  onPolicyChange(event: any) {
+  }
 
   post = {
     endPoint: 'https://fabian-faber.de/sendMail.php',
@@ -37,21 +43,39 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    this.formSubmitted = true; // Formular als abgesendet markieren
+
+    if (ngForm.valid && this.contactData.policy) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            console.log('Form submitted successfully');
+            this.contactData = {
+              name: "",
+              email: "",
+              message: "",
+              policy: false
+            };
             ngForm.resetForm();
           },
           error: (error) => {
-            console.error(error);
+            console.error('Submission error:', error);
+            this.formSubmitted = false; // Fehlerfall, damit die Fehlermeldungen wieder angezeigt werden können
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
+    } else {
+      console.error('Form is invalid or policy checkbox is not checked');
+      this.formSubmitted = false; // Falls die Policy-Checkbox nicht überprüft wurde und das Formular ungültig ist
     }
+  }
+
+
+  isFormValid(ngForm: NgForm) {
+    return ngForm.valid && this.contactData.policy;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

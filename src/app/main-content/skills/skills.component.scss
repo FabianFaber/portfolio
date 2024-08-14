@@ -1,16 +1,17 @@
 .skills {
-    margin-top: 80px;
+    position: relative;
+    width: 100vw;
+    margin-top: 100px;
     color: white;
     display: flex;
     justify-content: space-between;
     gap: 100px;
     max-width: 1920px;
     z-index: 80;
-    // padding-left: 100px;
-    // padding-right: 100px;
 }
 
 .skillsSektion {
+    padding-left: 100px;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -77,6 +78,7 @@
     flex-direction: column;
     gap: 20px;
     z-index: 80;
+    padding-right: 100px;
 
     >span {
         word-wrap: break-word;
@@ -111,6 +113,7 @@
 
     .skillsText {
         width: 500px;
+        word-break: break;
 
         >span {
             font-size: 14px;
@@ -147,6 +150,24 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .skillsText {
+        >span {
+            font-size: 12px;
+        }
+    }
+
+    .looking {
+        h3 {
+            font-size: 20px;
+        }
+
+        >p {
+            font-size: 20px;
+        }
+    }
+}
+
 @media (max-width: 960px) {
     .skills {
         padding-left: 0;
@@ -157,6 +178,7 @@
     }
 
     .skillsSektion {
+        padding-left: 0px;
         width: 80%;
     }
 
@@ -180,11 +202,11 @@
 
     .looking {
         h3 {
-            font-size: 30px;
+            font-size: 28px;
         }
 
         >p {
-            font-size: 30px;
+            font-size: 28px;
         }
     }
 }
@@ -192,11 +214,11 @@
 @media (max-width: 500px) {
     .looking {
         h3 {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         >p {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 

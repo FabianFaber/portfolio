@@ -1,16 +1,21 @@
 footer {
     height: 291px;
+    width: 98vw;
+    max-width: 1920px;
     background-color: #141D2F;
     border-top: 4px solid #00BEE8;
-    padding-left: 100px;
-    padding-right: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     color: white;
 }
 
+
 .impressum {
+    display: none;
+}
+
+.impressumShow {
     display: none;
 }
 
@@ -18,6 +23,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 
     >a {
         text-decoration: none;
@@ -85,6 +91,20 @@ footer {
     }
 }
 
+@media (max-width: 1600px) {
+    footer {
+        justify-content: space-around;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .links {
+        padding-right: 0;
+    }
+}
+
 @media (max-width: 800px) {
     footer {
         padding-top: 50px;
@@ -95,9 +115,18 @@ footer {
     }
 
     .logo {
+        padding-left: 0;
         >a {
             display: none;
         }
+    }
+
+    .impressumShow {
+        display: block;
+    }
+
+    .links {
+        padding-right: 0;
     }
 
     .impressum {

@@ -1,15 +1,28 @@
 .aboveTheFold {
+    position: relative;
     height: 87.9vh;
     width: 100vw;
+    max-width: 1920px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 50px;
     color: white;
-    background-image: url('./../../../assets/img/above-the-fold/background_blue.png'), url('./../../../assets/img/above-the-fold/background_green.png');
-    background-position: left -20%, right -300%;
-    background-repeat: no-repeat, no-repeat;
+}
+
+.blue {
+    width: 650px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    margin-left: -250px;
+}
+
+.green {
+    position: absolute;
+    right: -500px;
+    top: 100px;
 }
 
 .name {
@@ -61,17 +74,24 @@
     }
 }
 
-.hyperLinks {
+.links {
     position: absolute;
-    left: 270px;
-    bottom: 50px;
+    bottom: 0;
+    width: 100vw;
+    max-width: 1920px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.hyperLinks {
     display: flex;
     align-items: center;
     gap: 40px;
 
     img {
         transition: all 0.2s ease-in-out;
-        
+
         &:hover {
             transform: scale(1.3);
             cursor: pointer;
@@ -80,17 +100,15 @@
 }
 
 .scrollDown {
-    position: absolute;
-    right: 250px;
-    bottom: 120px;
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-right: 100px;
     transform: rotate(90deg);
     font-size: 23px;
 
     >svg {
-        transform: rotate(270deg); 
+        transform: rotate(270deg);
     }
 }
 
@@ -98,13 +116,13 @@
     .rotation {
         font-size: 60px;
     }
-    
+
     .fullName {
         font-size: 98px;
         padding-top: 30px;
         height: 130px;
     }
-    
+
     .dev {
         font-size: 34px;
     }
@@ -115,13 +133,13 @@
     .rotation {
         font-size: 50px;
     }
-    
+
     .fullName {
         font-size: 65px;
         padding-top: 40px;
         height: 90px;
     }
-    
+
     .dev {
         font-size: 34px;
     }
@@ -131,13 +149,13 @@
     .rotation {
         font-size: 45px;
     }
-    
+
     .fullName {
         font-size: 55px;
         padding-top: 40px;
         height: 80px;
     }
-    
+
     .dev {
         font-size: 34px;
     }
@@ -145,19 +163,37 @@
     .scrollDown {
         display: none;
     }
+
+    .blue {
+        width: 500px;
+        top: 150px;
+        left: 0;
+    }
+
+    .green {
+        width: 500px;
+        top: 300px;
+        right: -300px;
+    }
 }
 
 @media (max-width: 800px) {
     .rotation {
         font-size: 30px;
     }
-    
+
     .fullName {
         font-size: 48px;
         padding-top: 50px;
         height: 50px;
     }
-    
+
+    .blue {
+        width: 400px;
+        top: 200px;
+        left: 100px;
+    }
+
     .dev {
         font-size: 30px;
     }
@@ -167,13 +203,13 @@
     .rotation {
         font-size: 20px;
     }
-    
+
     .fullName {
         font-size: 28px;
         padding-top: 50px;
         height: 30px;
     }
-    
+
     .dev {
         font-size: 18px;
     }
@@ -184,9 +220,9 @@
         border-radius: 10px;
         font-size: 15px;
         background-color: #00BEE8;
-    
+
     }
-    
+
     .aboveTheFold {
         gap: 0;
     }
@@ -196,5 +232,17 @@
 
         gap: 25px;
 
+    }
+
+    .green {
+        width: 300px;
+        right: -200px;
+        top: 400px;
+    }
+
+    .blue {
+        width: 300px;
+        top: 200px;
+        left: 100px;
     }
 }

@@ -1,8 +1,9 @@
 header {
   height: 110px;
   width: 100vw;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +13,7 @@ header {
 }
 
 .content {
+  position: fixed;
   width: 100vw;
   padding-left: 100px;
   padding-right: 100px;
@@ -19,6 +21,8 @@ header {
   justify-content: space-between;
   align-items: center;
   max-width: 1920px;
+  z-index: 999;
+  box-sizing: border-box;
 }
 
 .translate {
@@ -116,20 +120,20 @@ header {
   z-index: 1;
 }
 
-#button-6 .checkbox:checked + .knobs:before {
+#button-6 .checkbox:checked+.knobs:before {
   left: -24px;
 }
 
-#button-6 .checkbox:checked + .knobs:after {
+#button-6 .checkbox:checked+.knobs:after {
   right: 4px;
 }
 
-#button-6 .checkbox:checked + .knobs span {
+#button-6 .checkbox:checked+.knobs span {
   left: 42px;
   background-color: #4B47FF;
 }
 
-#button-6 .checkbox:checked ~ .layer {
+#button-6 .checkbox:checked~.layer {
   background-color: rgb(143 68 253 / 37%);
 }
 
@@ -188,9 +192,43 @@ header {
   }
 }
 
+.navigation a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 23px;
+  font-weight: 400;
+  overflow: hidden; 
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #00BEE8;
+  transition: width 0.5s ease-in-out; 
+}
+
+.navigation a.active::after {
+  width: 100%;
+}
+
+.navigation a:hover {
+  color: #00BEE8;
+}
+
+.navigation a.active {
+  color: #00BEE8;
+}
+
 .navigation {
   display: flex;
+  align-items: center;
   gap: 20px;
+
   >img {
     display: none;
 
@@ -211,6 +249,22 @@ header {
       &:hover {
         color: #00BEE8;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .content {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .navigation {
+    >div {
+      >a {
+        font-size: 20px;
       }
     }
   }
@@ -257,16 +311,19 @@ header {
   }
 }
 
-
-
 @media (max-width: 520px) {
   header {
-    // padding-left: 40px;
-    // padding-right: 40px;
     justify-content: space-around;
 
     >svg {
       width: 100px;
     }
+  }
+}
+
+@media (max-width: 1100px) {
+  .content {
+    padding-left: 20px;
+    padding-right: 50px;
   }
 }

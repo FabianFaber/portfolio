@@ -5,6 +5,9 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class TranslationService {
+  instant(key: string): string {
+    return this.translate.instant(key);
+  }
 
   constructor(private translate: TranslateService) { 
     translate.setDefaultLang('en');

@@ -1,4 +1,5 @@
 .project {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +16,7 @@
 
         .projectDescription {
             text-align: start;
+            z-index: 7;
         }
 
         ;
@@ -31,6 +33,7 @@
 
         .projectDescription {
             text-align: end;
+            z-index: 7;
         }
 
         ;

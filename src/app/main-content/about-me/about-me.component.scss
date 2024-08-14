@@ -1,9 +1,13 @@
 .aboutMe {
     max-width: 1920px;
+    width: 100vw;
+    height: 100%;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 200px;
+    position: relative;
 }
 
 .aboutMeContent {
@@ -26,7 +30,7 @@
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    z-index: 1;
+    z-index: 9;
 
     >svg {
         flex-shrink: 0;
@@ -41,32 +45,38 @@
 }
 
 .photoMe {
-    background-image: url('./../../../assets/img/about-me/purple_shadow.png'), url('./../../../assets/img/about-me/green_shadow.png');
-    background-position: left, right 100%;
-    background-repeat: no-repeat, no-repeat;
+    position: relative;
 
-    >img {
-        margin-top: 120px;
-        margin-right: 100px;
-        width: 700px;
-        z-index: 2;
-    }
+}
 
+.photoMe > img.me {
+    margin-top: 120px;
+    margin-right: 100px;
+    width: 700px;
+    position: relative; 
+    z-index: 2; 
+}
+
+.photoMe .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
 }
 
 .seperator {
     position: absolute;
-    bottom: -1400px;
-    left: 0;
-    right: 0;
-    background-image: url('./../../../assets/img/about-me/seperator.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    background-position: right 1%;
-    height: 880px;
+    top: 650px;
+    width: 100vw;
     max-width: 1920px;
-    z-index: 0;
+    z-index: 3;
+
+    >img {
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 1500px) {
@@ -77,8 +87,8 @@
     }
 
     .photoMe {
-        >img {
-            width: 450px;
+        >img.me {
+            width: 550px;
         }
     }
 
@@ -96,13 +106,13 @@
     }
 
     .seperator {
-        bottom: -1350px;
+        top: 550px;
     }
 }
 
 @media (max-width: 1100px) {
     .photoMe {
-        >img {
+        >img.me {
             margin-right: 0px;
         }
     }
@@ -125,30 +135,28 @@
         }
     }
 
-    .seperator {
-        bottom: -1360px;
-    }
 }
 
 @media (max-width: 960px) {
     .aboutMe {
+        margin-top: 200px;
         flex-direction: column-reverse;
     }
 
     .photoMe {
-        >img {
+        >img.me {
             margin-top: 20px;
         }
     }
 
-    .aboutMeContent{
+    .aboutMeContent {
         margin-left: 0;
         margin-right: 0;
         width: 80%;
     }
 
     .seperator {
-        bottom: -1250px;
+        top: 450px;
     }
 
     .aboutMeContent {
@@ -168,14 +176,18 @@
 
 @media (max-width: 500px) {
     .photoMe {
-        >img {
+        >img.me {
             margin-top: 20px;
             width: 300px;
         }
     }
 
+    .green {
+        top: 1900px;
+    }
+
     .seperator {
-        bottom: -1100px;
+        top: 250px;
     }
 
     .aboutMeContent {

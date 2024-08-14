@@ -24,6 +24,8 @@
     "formPolicy3": "and agree to the processing of my data as outlined.",
     "nameReq": "Your name is required",
     "mailReq": "Your email is required",
-    "msgReq": "Your message is empty",
-    "policyReg": "Please accept the privacy policy."
+    "msgReq": "Your message is empty. Please enter more than 10 characters",
+    "policyReg": "Please accept the privacy policy.",
+    "feedbackOkan": "Fabian is distinguished by his exceptional diligence and strong work ethic. His team-oriented approach consistently fosters a positive and productive atmosphere. Particularly impressive are his outstanding JavaScript skills, which he effectively applies to our projects. Thanks to his technical expertise and dedication, we have achieved numerous successes. It has been a pleasure working with Fabian – he is undoubtedly an invaluable asset to our team.",
+    "feedbackDaniela": "I was really fortunate to be on a team with Fabian at DA. Working with him is straightforward and well-structured. Thanks to the excellent communication within the team and his tireless dedication, we were able to achieve our goal on schedule and successfully complete our project. He is an outstanding teammate, and I would welcome the opportunity to work on more projects with him. I wish him all the best for the future."
 }

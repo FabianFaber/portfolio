@@ -1,0 +1,27 @@
+section {
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    max-width: 1920px;
+    width: 100vw;
+    padding-left: 100px;
+    padding-right: 100px;
+    word-break: break;
+    box-sizing: border-box;
+
+    >h2 {
+        font-size: 40px !important;
+    }
+
+    >h3 {
+        font-size: 20px;
+    }
+
+    >p {
+        font-size: 12px;
+
+        >a {
+            color: rgb(103, 103, 255);
+        }
+    }
+}

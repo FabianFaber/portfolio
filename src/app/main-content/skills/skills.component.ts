@@ -11,4 +11,18 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class SkillsComponent {
   translate = inject(TranslationService);
+
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = 130; 
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 }

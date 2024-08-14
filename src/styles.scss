@@ -202,7 +202,7 @@ body {
   margin: 0;
   font-family: 'Poppins';
   background-color: #141D2F;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 p {
@@ -234,6 +234,12 @@ h3 {
 @media (max-width: 1500px) {
   h2 {
     font-size: 70px;
+  }
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 60px;
   }
 }
 
