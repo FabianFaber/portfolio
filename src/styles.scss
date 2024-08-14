@@ -196,6 +196,56 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  visibility: visible;
+}
+
+::-webkit-scrollbar-track {
+  visibility: hidden;
+}
+
+body::-webkit-scrollbar {
+  visibility: visible;
+}
+
+body::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  visibility: visible;
+}
+
+body::-webkit-scrollbar-track {
+  visibility: visible;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #141D2F;
+}
+
 body {
   display: flex;
   justify-content: center;

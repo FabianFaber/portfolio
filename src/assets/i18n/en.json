@@ -33,7 +33,8 @@
     "scroll": "Scroll down",
     "talkBtn": "Let´s talk!",
     "sendBtn": "Send message",
-    "messageSent": "Message sent!",
+    "messageSent": "Thank you for your message!",
+    "messageSent2": "I will get in touch as quickly as possible.",
     "impressum": "Imprint",
     "source": "Source"
 }

@@ -13,7 +13,8 @@
       <!-- Popup container added here -->
       <div class="popup-container">
         <div class="popup" [ngClass]="{'show': showPopup, 'hide': hidePopup}">
-          {{'messageSent' | translate}}
+          {{'messageSent' | translate}} <br>
+          {{'messageSent2' | translate}}
         </div>
         
         <form class="contactInput" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">

@@ -139,9 +139,9 @@ section {
   
   .popup {
     position: absolute;
-    top: 200px;
+    top: 210px;
     right: -400px;
-    width: 250px;
+    width: 340px;
     background-color: #00BEE8;
     color: white;
     padding: 15px;
@@ -426,6 +426,11 @@ input[type=submit].valid {
 }
 
 @media (max-width: 1150px) {
+    .popup {
+        width: 280px;
+        font-size: 12px;
+    }
+
     .contactText {
         width: 350px;
 
@@ -522,6 +527,11 @@ input[type=submit].valid {
 @media (max-width: 440px) {
     .contactInput {
         max-width: 250px;
+    }
+
+    .popup {
+        width: 180px;
+        font-size: 8px;
     }
 
     .inputThose {
