@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './policy.component.html',
   styleUrl: './policy.component.scss'
 })
-export class PolicyComponent  implements OnInit {
+export class PolicyComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
